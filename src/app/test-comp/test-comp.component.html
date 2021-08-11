@@ -1,0 +1,21 @@
+<p>test-comp works!</p>
+<br>
+<p> also; {{test}}</p>
+<p> this is a {{header}}</p>
+<br>
+<ul>
+    <div *ngFor="let x of testArray" (click)="selectItem(x)">
+        <li *ngIf="x.order<3">
+            {{x.order}} | {{x.desc}}
+        </li>
+    </div>
+    
+</ul>
+
+<p *ngIf="selectedItem; else elseBlock">You've selected {{selectedItem.desc}}</p> 
+
+
+
+
+
+<ng-template #elseBlock>nothing is selected </ng-template>
